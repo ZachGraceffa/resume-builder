@@ -1,10 +1,9 @@
 <script>
-	export let name;
+	import resume from '../public/resumes/general-back-end.json';
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>{resume.name}</h1>
 </main>
 
 <style>

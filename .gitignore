@@ -1,3 +1,7 @@
+# Custom
+public/resumes/*
+!public/resumes/john-doe.json
+
 # Logs
 logs
 *.log
