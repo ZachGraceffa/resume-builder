@@ -26,7 +26,7 @@
         "description": "Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."
     }],
     "education":[{
-        "institution": "ITT Technical Institute",
+        "name": "ITT Technical Institute",
         "location": "New York, NY",
         "year": "1998",
         "degree": "Bachelor of Arts, Communications"

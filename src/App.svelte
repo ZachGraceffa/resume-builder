@@ -1,7 +1,13 @@
-<script>
-	export let resumeType
+<script lang="ts">
+	export let resumeType: string
 	import ResumeTemplateZG from './components/ResumeZG.svelte'
-	import resumeData from '../public/resumes/general-back-end.json'
+	import type { Resume } from './types/iResume'
+	let fs = require('fs')
+
+	let resumeData: Resume
+	fs.readFile('../public/resumes/general-back-end.json', (err, data) =>{
+		resumeData = JSON.parse(data.toString())
+	})
 </script>
 
 <main>
