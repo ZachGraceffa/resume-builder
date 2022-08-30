@@ -19,6 +19,6 @@ interface Job {
 interface Institution {
     name: string,
     location: string,
-    year: number,
+    year: string,
     degree: string
 }

@@ -1,14 +1,14 @@
 <script lang='ts'>
-    import type { Resume } from '../types/iResume'
+    import type { Resume } from '../types/Resume'
     export let resumeData: Resume
 </script>
 
 <article>
     <header>
         <h1>{resumeData.name}</h1>
-        <span>{resumeData.email}</span>
-        <span>{resumeData.phone}</span>
-        <span>{resumeData.website}</span>
+        <p>{resumeData.email}</p>
+        <p>{resumeData.phone}</p>
+        <p>{resumeData.website}</p>
     </header>
     <main>
         {#if resumeData.jobs }
@@ -35,3 +35,13 @@
         {/each}
     </main>
 </article>
+
+<style>
+    article {
+        border: 1px solid black;
+    }
+
+    header > p {
+        margin: 0;
+    }
+</style>
