@@ -6,7 +6,9 @@
 <article>
     <header>
         <h1>{resumeData.name}</h1>
+        {#if resumeData.email}
         <p>{resumeData.email}</p>
+        {/if}
         <p>{resumeData.phone}</p>
         <p>{resumeData.website}</p>
     </header>
@@ -37,10 +39,6 @@
 </article>
 
 <style>
-    article {
-        border: 1px solid black;
-    }
-
     header > p {
         margin: 0;
     }
