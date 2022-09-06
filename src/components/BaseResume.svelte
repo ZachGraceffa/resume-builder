@@ -21,33 +21,40 @@
     </header>
     <main>
         {#if resumeData.bio }
-        <h2>Bio</h2>
-        <hr />
-        <p class='description'>{resumeData.bio}</p>
+        <section>
+            <h2>Bio</h2>
+            <hr />
+            <p class='description'>{resumeData.bio}</p>
+        </section>
         {/if}
         {#if resumeData.jobs }
-        <h2>Work Experience</h2>
-        <hr />
+        <section>
+            <h2>Work Experience</h2>
+            <hr />
+            {#each resumeData.jobs as job}
+            <div class='rel'>
+                <h3>{job.title}</h3>
+                <h4>{job.organization}</h4> - <span>{job.location}</span>
+                <span class='abs-tr'>{job.duration}</span>
+                <p class='description description-work'>{job.description}</p>
+            </div>
+            {/each}
+        </section>
         {/if}
-        {#each resumeData.jobs as job}
-        <div class='rel'>
-            <h3>{job.title}</h3>
-            <h4>{job.organization}</h4> - <span>{job.location}</span>
-            <span class='abs-tr'>{job.duration}</span>
-            <p class='description description-work'>{job.description}</p>
-        </div>
-        {/each}
         {#if resumeData.education }
-        <h2>Education History</h2>
-        <hr />
+        <section>
+            <h2>Education History</h2>
+            <hr />
+            {#each resumeData.education as institution}
+            <div class='rel'>
+                <h3>{institution.name}</h3>
+                <span>{institution.location}</span>
+                <span class='abs-tr'>{institution.year}</span>
+                <h4 class='block'>{institution.degree}</h4>
+            </div>
+            {/each}
+        </section>
         {/if}
-        {#each resumeData.education as institution}
-        <div class='rel'>
-            <h3>{institution.name}</h3>
-            <h4>{institution.degree}</h4> - <span>{institution.location}</span>
-            <span class='abs-tr'>{institution.year}</span>
-        </div>
-        {/each}
     </main>
     {/if}
 </article>
@@ -69,8 +76,14 @@
     h4 {
         display: inline;
     }
+    h4.block {
+        display: block;
+    }
     header > div > p {
         margin: 0;
+    }
+    section {
+        margin-bottom: 32px;
     }
     .rel {
         position: relative;
@@ -82,7 +95,7 @@
         text-align: right;
     }
     .description {
-        margin: 8px 0 24px;
+        margin: 12px 0 24px;
     }
     .description-work {
         width: 85%;

@@ -1,6 +1,7 @@
 # Custom
 public/resumes/*
 !public/resumes/john-doe.json
+src/troubleshoot.md
 
 # Logs
 logs

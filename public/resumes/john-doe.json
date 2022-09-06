@@ -3,7 +3,7 @@
     "email": "johndoe@email.com",
     "phone": "123-456-7890",
     "website": "johndoe.com",
-    "bio" : "Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat.",
+    "bio" : "Cras dapibus. Vivamus in erat ut urna cursus vestibulum. In hac habitasse platea dictumst. Etiam feugiat lorem non metus. Donec posuere vulputate arcu. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Ut leo. Nullam sagittis. Vivamus quis mi. In ut quam vitae odio lacinia tincidunt. Cras varius. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Quisque id odio. Pellentesque auctor neque nec urna. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Cras sagittis. Fusce fermentum. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras sagittis.",
     "jobs": [{
         "title": "Cashier",
         "organization": "What-A-Burger",
@@ -15,14 +15,14 @@
         "title": "Cashier",
         "organization": "What-A-Burger",
         "location": "Stanford, CA",
-        "duration": "2014 - 2018",
+        "duration": "2010 - 2014",
         "description": "Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."
     },
     {
         "title": "Cashier",
         "organization": "What-A-Burger",
         "location": "Stanford, CA",
-        "duration": "2014 - 2018",
+        "duration": "2006 - 2010",
         "description": "Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."
     }],
     "education":[{

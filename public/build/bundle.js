@@ -980,29 +980,12 @@ var app = (function () {
     	let main;
     	let t5;
     	let t6;
-    	let t7;
-    	let t8;
     	let if_block0 = /*resumeData*/ ctx[0].email && create_if_block_6(ctx);
     	let if_block1 = /*resumeData*/ ctx[0].phone && create_if_block_5(ctx);
     	let if_block2 = /*resumeData*/ ctx[0].website && create_if_block_4(ctx);
     	let if_block3 = /*resumeData*/ ctx[0].bio && create_if_block_3(ctx);
     	let if_block4 = /*resumeData*/ ctx[0].jobs && create_if_block_2(ctx);
-    	let each_value_1 = /*resumeData*/ ctx[0].jobs;
-    	validate_each_argument(each_value_1);
-    	let each_blocks_1 = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-    	}
-
     	let if_block5 = /*resumeData*/ ctx[0].education && create_if_block_1$1(ctx);
-    	let each_value = /*resumeData*/ ctx[0].education;
-    	validate_each_argument(each_value);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
-    	}
 
     	const block = {
     		c: function create() {
@@ -1022,24 +1005,12 @@ var app = (function () {
     			t5 = space();
     			if (if_block4) if_block4.c();
     			t6 = space();
-
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
-    			}
-
-    			t7 = space();
     			if (if_block5) if_block5.c();
-    			t8 = space();
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			attr_dev(h1, "class", "svelte-p67jbp");
+    			attr_dev(h1, "class", "svelte-d4pphw");
     			add_location(h1, file$2, 6, 8, 116);
-    			attr_dev(div, "class", "abs-tr svelte-p67jbp");
+    			attr_dev(div, "class", "abs-tr svelte-d4pphw");
     			add_location(div, file$2, 7, 8, 151);
-    			attr_dev(header, "class", "rel svelte-p67jbp");
+    			attr_dev(header, "class", "rel svelte-d4pphw");
     			add_location(header, file$2, 5, 4, 87);
     			add_location(main, file$2, 19, 4, 482);
     		},
@@ -1060,18 +1031,7 @@ var app = (function () {
     			append_dev(main, t5);
     			if (if_block4) if_block4.m(main, null);
     			append_dev(main, t6);
-
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(main, null);
-    			}
-
-    			append_dev(main, t7);
     			if (if_block5) if_block5.m(main, null);
-    			append_dev(main, t8);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(main, null);
-    			}
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*resumeData*/ ctx[0].name + "")) set_data_dev(t0, t0_value);
@@ -1129,7 +1089,9 @@ var app = (function () {
     			}
 
     			if (/*resumeData*/ ctx[0].jobs) {
-    				if (if_block4) ; else {
+    				if (if_block4) {
+    					if_block4.p(ctx, dirty);
+    				} else {
     					if_block4 = create_if_block_2(ctx);
     					if_block4.c();
     					if_block4.m(main, t6);
@@ -1139,63 +1101,17 @@ var app = (function () {
     				if_block4 = null;
     			}
 
-    			if (dirty & /*resumeData*/ 1) {
-    				each_value_1 = /*resumeData*/ ctx[0].jobs;
-    				validate_each_argument(each_value_1);
-    				let i;
-
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
-
-    					if (each_blocks_1[i]) {
-    						each_blocks_1[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks_1[i] = create_each_block_1(child_ctx);
-    						each_blocks_1[i].c();
-    						each_blocks_1[i].m(main, t7);
-    					}
-    				}
-
-    				for (; i < each_blocks_1.length; i += 1) {
-    					each_blocks_1[i].d(1);
-    				}
-
-    				each_blocks_1.length = each_value_1.length;
-    			}
-
     			if (/*resumeData*/ ctx[0].education) {
-    				if (if_block5) ; else {
+    				if (if_block5) {
+    					if_block5.p(ctx, dirty);
+    				} else {
     					if_block5 = create_if_block_1$1(ctx);
     					if_block5.c();
-    					if_block5.m(main, t8);
+    					if_block5.m(main, null);
     				}
     			} else if (if_block5) {
     				if_block5.d(1);
     				if_block5 = null;
-    			}
-
-    			if (dirty & /*resumeData*/ 1) {
-    				each_value = /*resumeData*/ ctx[0].education;
-    				validate_each_argument(each_value);
-    				let i;
-
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(main, null);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value.length;
     			}
     		},
     		d: function destroy(detaching) {
@@ -1207,9 +1123,7 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			if (if_block3) if_block3.d();
     			if (if_block4) if_block4.d();
-    			destroy_each(each_blocks_1, detaching);
     			if (if_block5) if_block5.d();
-    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -1234,7 +1148,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-p67jbp");
+    			attr_dev(p, "class", "svelte-d4pphw");
     			add_location(p, file$2, 9, 12, 219);
     		},
     		m: function mount(target, anchor) {
@@ -1270,7 +1184,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-p67jbp");
+    			attr_dev(p, "class", "svelte-d4pphw");
     			add_location(p, file$2, 12, 12, 310);
     		},
     		m: function mount(target, anchor) {
@@ -1306,7 +1220,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-p67jbp");
+    			attr_dev(p, "class", "svelte-d4pphw");
     			add_location(p, file$2, 15, 12, 403);
     		},
     		m: function mount(target, anchor) {
@@ -1334,6 +1248,7 @@ var app = (function () {
 
     // (21:8) {#if resumeData.bio }
     function create_if_block_3(ctx) {
+    	let section;
     	let h2;
     	let t1;
     	let hr;
@@ -1344,6 +1259,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			section = element("section");
     			h2 = element("h2");
     			h2.textContent = "Bio";
     			t1 = space();
@@ -1351,30 +1267,29 @@ var app = (function () {
     			t2 = space();
     			p = element("p");
     			t3 = text(t3_value);
-    			attr_dev(h2, "class", "svelte-p67jbp");
-    			add_location(h2, file$2, 21, 8, 527);
-    			attr_dev(hr, "class", "svelte-p67jbp");
-    			add_location(hr, file$2, 22, 8, 548);
-    			attr_dev(p, "class", "description svelte-p67jbp");
-    			add_location(p, file$2, 23, 8, 563);
+    			attr_dev(h2, "class", "svelte-d4pphw");
+    			add_location(h2, file$2, 22, 12, 549);
+    			attr_dev(hr, "class", "svelte-d4pphw");
+    			add_location(hr, file$2, 23, 12, 574);
+    			attr_dev(p, "class", "description svelte-d4pphw");
+    			add_location(p, file$2, 24, 12, 593);
+    			attr_dev(section, "class", "svelte-d4pphw");
+    			add_location(section, file$2, 21, 8, 527);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h2, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, hr, anchor);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, section, anchor);
+    			append_dev(section, h2);
+    			append_dev(section, t1);
+    			append_dev(section, hr);
+    			append_dev(section, t2);
+    			append_dev(section, p);
     			append_dev(p, t3);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t3_value !== (t3_value = /*resumeData*/ ctx[0].bio + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h2);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(hr);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(section);
     		}
     	};
 
@@ -1389,32 +1304,80 @@ var app = (function () {
     	return block;
     }
 
-    // (26:8) {#if resumeData.jobs }
+    // (28:8) {#if resumeData.jobs }
     function create_if_block_2(ctx) {
+    	let section;
     	let h2;
     	let t1;
     	let hr;
+    	let t2;
+    	let each_value_1 = /*resumeData*/ ctx[0].jobs;
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
 
     	const block = {
     		c: function create() {
+    			section = element("section");
     			h2 = element("h2");
     			h2.textContent = "Work Experience";
     			t1 = space();
     			hr = element("hr");
-    			attr_dev(h2, "class", "svelte-p67jbp");
-    			add_location(h2, file$2, 26, 8, 660);
-    			attr_dev(hr, "class", "svelte-p67jbp");
-    			add_location(hr, file$2, 27, 8, 693);
+    			t2 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(h2, "class", "svelte-d4pphw");
+    			add_location(h2, file$2, 29, 12, 731);
+    			attr_dev(hr, "class", "svelte-d4pphw");
+    			add_location(hr, file$2, 30, 12, 768);
+    			attr_dev(section, "class", "svelte-d4pphw");
+    			add_location(section, file$2, 28, 8, 709);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h2, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, hr, anchor);
+    			insert_dev(target, section, anchor);
+    			append_dev(section, h2);
+    			append_dev(section, t1);
+    			append_dev(section, hr);
+    			append_dev(section, t2);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(section, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1) {
+    				each_value_1 = /*resumeData*/ ctx[0].jobs;
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(section, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h2);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(hr);
+    			if (detaching) detach_dev(section);
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -1422,14 +1385,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(26:8) {#if resumeData.jobs }",
+    		source: "(28:8) {#if resumeData.jobs }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (30:8) {#each resumeData.jobs as job}
+    // (32:12) {#each resumeData.jobs as job}
     function create_each_block_1(ctx) {
     	let div;
     	let h3;
@@ -1451,6 +1414,7 @@ var app = (function () {
     	let p;
     	let t8_value = /*job*/ ctx[4].description + "";
     	let t8;
+    	let t9;
 
     	const block = {
     		c: function create() {
@@ -1469,17 +1433,18 @@ var app = (function () {
     			t7 = space();
     			p = element("p");
     			t8 = text(t8_value);
-    			attr_dev(h3, "class", "svelte-p67jbp");
-    			add_location(h3, file$2, 31, 12, 791);
-    			attr_dev(h4, "class", "svelte-p67jbp");
-    			add_location(h4, file$2, 32, 12, 824);
-    			add_location(span0, file$2, 32, 42, 854);
-    			attr_dev(span1, "class", "abs-tr svelte-p67jbp");
-    			add_location(span1, file$2, 33, 12, 894);
-    			attr_dev(p, "class", "description description-work svelte-p67jbp");
-    			add_location(p, file$2, 34, 12, 949);
-    			attr_dev(div, "class", "rel svelte-p67jbp");
-    			add_location(div, file$2, 30, 8, 761);
+    			t9 = space();
+    			attr_dev(h3, "class", "svelte-d4pphw");
+    			add_location(h3, file$2, 33, 16, 864);
+    			attr_dev(h4, "class", "svelte-d4pphw");
+    			add_location(h4, file$2, 34, 16, 901);
+    			add_location(span0, file$2, 34, 46, 931);
+    			attr_dev(span1, "class", "abs-tr svelte-d4pphw");
+    			add_location(span1, file$2, 35, 16, 975);
+    			attr_dev(p, "class", "description description-work svelte-d4pphw");
+    			add_location(p, file$2, 36, 16, 1034);
+    			attr_dev(div, "class", "rel svelte-d4pphw");
+    			add_location(div, file$2, 32, 12, 830);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1497,6 +1462,7 @@ var app = (function () {
     			append_dev(div, t7);
     			append_dev(div, p);
     			append_dev(p, t8);
+    			append_dev(div, t9);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*job*/ ctx[4].title + "")) set_data_dev(t0, t0_value);
@@ -1514,39 +1480,87 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(30:8) {#each resumeData.jobs as job}",
+    		source: "(32:12) {#each resumeData.jobs as job}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:8) {#if resumeData.education }
+    // (42:8) {#if resumeData.education }
     function create_if_block_1$1(ctx) {
+    	let section;
     	let h2;
     	let t1;
     	let hr;
+    	let t2;
+    	let each_value = /*resumeData*/ ctx[0].education;
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
 
     	const block = {
     		c: function create() {
+    			section = element("section");
     			h2 = element("h2");
     			h2.textContent = "Education History";
     			t1 = space();
     			hr = element("hr");
-    			attr_dev(h2, "class", "svelte-p67jbp");
-    			add_location(h2, file$2, 38, 8, 1086);
-    			attr_dev(hr, "class", "svelte-p67jbp");
-    			add_location(hr, file$2, 39, 8, 1121);
+    			t2 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(h2, "class", "svelte-d4pphw");
+    			add_location(h2, file$2, 43, 12, 1234);
+    			attr_dev(hr, "class", "svelte-d4pphw");
+    			add_location(hr, file$2, 44, 12, 1273);
+    			attr_dev(section, "class", "svelte-d4pphw");
+    			add_location(section, file$2, 42, 8, 1212);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h2, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, hr, anchor);
+    			insert_dev(target, section, anchor);
+    			append_dev(section, h2);
+    			append_dev(section, t1);
+    			append_dev(section, hr);
+    			append_dev(section, t2);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(section, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1) {
+    				each_value = /*resumeData*/ ctx[0].education;
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(section, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h2);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(hr);
+    			if (detaching) detach_dev(section);
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -1554,30 +1568,30 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(38:8) {#if resumeData.education }",
+    		source: "(42:8) {#if resumeData.education }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:8) {#each resumeData.education as institution}
+    // (46:12) {#each resumeData.education as institution}
     function create_each_block(ctx) {
     	let div;
     	let h3;
     	let t0_value = /*institution*/ ctx[1].name + "";
     	let t0;
     	let t1;
-    	let h4;
-    	let t2_value = /*institution*/ ctx[1].degree + "";
+    	let span0;
+    	let t2_value = /*institution*/ ctx[1].location + "";
     	let t2;
     	let t3;
-    	let span0;
-    	let t4_value = /*institution*/ ctx[1].location + "";
+    	let span1;
+    	let t4_value = /*institution*/ ctx[1].year + "";
     	let t4;
     	let t5;
-    	let span1;
-    	let t6_value = /*institution*/ ctx[1].year + "";
+    	let h4;
+    	let t6_value = /*institution*/ ctx[1].degree + "";
     	let t6;
     	let t7;
 
@@ -1587,45 +1601,45 @@ var app = (function () {
     			h3 = element("h3");
     			t0 = text(t0_value);
     			t1 = space();
-    			h4 = element("h4");
-    			t2 = text(t2_value);
-    			t3 = text(" - ");
     			span0 = element("span");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			span1 = element("span");
     			t4 = text(t4_value);
     			t5 = space();
-    			span1 = element("span");
+    			h4 = element("h4");
     			t6 = text(t6_value);
     			t7 = space();
-    			attr_dev(h3, "class", "svelte-p67jbp");
-    			add_location(h3, file$2, 43, 12, 1232);
-    			attr_dev(h4, "class", "svelte-p67jbp");
-    			add_location(h4, file$2, 44, 12, 1272);
-    			add_location(span0, file$2, 44, 44, 1304);
-    			attr_dev(span1, "class", "abs-tr svelte-p67jbp");
-    			add_location(span1, file$2, 45, 12, 1352);
-    			attr_dev(div, "class", "rel svelte-p67jbp");
-    			add_location(div, file$2, 42, 8, 1202);
+    			attr_dev(h3, "class", "svelte-d4pphw");
+    			add_location(h3, file$2, 47, 16, 1382);
+    			add_location(span0, file$2, 48, 16, 1426);
+    			attr_dev(span1, "class", "abs-tr svelte-d4pphw");
+    			add_location(span1, file$2, 49, 16, 1478);
+    			attr_dev(h4, "class", "block svelte-d4pphw");
+    			add_location(h4, file$2, 50, 16, 1541);
+    			attr_dev(div, "class", "rel svelte-d4pphw");
+    			add_location(div, file$2, 46, 12, 1348);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, h3);
     			append_dev(h3, t0);
     			append_dev(div, t1);
-    			append_dev(div, h4);
-    			append_dev(h4, t2);
-    			append_dev(div, t3);
     			append_dev(div, span0);
-    			append_dev(span0, t4);
-    			append_dev(div, t5);
+    			append_dev(span0, t2);
+    			append_dev(div, t3);
     			append_dev(div, span1);
-    			append_dev(span1, t6);
+    			append_dev(span1, t4);
+    			append_dev(div, t5);
+    			append_dev(div, h4);
+    			append_dev(h4, t6);
     			append_dev(div, t7);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*institution*/ ctx[1].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*institution*/ ctx[1].degree + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*institution*/ ctx[1].location + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*institution*/ ctx[1].year + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*institution*/ ctx[1].location + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*institution*/ ctx[1].year + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*institution*/ ctx[1].degree + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -1636,7 +1650,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(42:8) {#each resumeData.education as institution}",
+    		source: "(46:12) {#each resumeData.education as institution}",
     		ctx
     	});
 
@@ -1850,7 +1864,7 @@ var app = (function () {
     	}
     }
 
-    var name="John Doe";var email="johndoe@email.com";var phone="123-456-7890";var website="johndoe.com";var bio="Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat.";var jobs=[{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2014 - 2018",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."},{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2014 - 2018",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."},{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2014 - 2018",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."}];var education=[{name:"ITT Technical Institute",location:"New York, NY",year:"1998",degree:"Bachelor of Arts, Communications"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,education:education};
+    var name="John Doe";var email="johndoe@email.com";var phone="123-456-7890";var website="johndoe.com";var bio="Cras dapibus. Vivamus in erat ut urna cursus vestibulum. In hac habitasse platea dictumst. Etiam feugiat lorem non metus. Donec posuere vulputate arcu. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Ut leo. Nullam sagittis. Vivamus quis mi. In ut quam vitae odio lacinia tincidunt. Cras varius. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Quisque id odio. Pellentesque auctor neque nec urna. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Cras sagittis. Fusce fermentum. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras sagittis.";var jobs=[{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2014 - 2018",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."},{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2010 - 2014",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."},{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2006 - 2010",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."}];var education=[{name:"ITT Technical Institute",location:"New York, NY",year:"1998",degree:"Bachelor of Arts, Communications"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,education:education};
 
     /* src/App.svelte generated by Svelte v3.49.0 */
     const file = "src/App.svelte";
