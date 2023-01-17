@@ -4,7 +4,7 @@ const app = new App({
 	target: document.body,
 	props: {
 		resumeType: 'Base',
-		resumeJsonFile: 'john-doe'
+		resumeJsonFile: 'optimizely'
 	}
 });
 

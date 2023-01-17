@@ -34,20 +34,39 @@
             {#each resumeData.jobs as job}
             <div class='rel'>
                 <h3>{job.title}</h3>
-                <h4>{job.organization}</h4> - <span>{job.location}</span>
+                <h4>{job.organization}</h4> <span>{job.location}</span>
                 <span class='abs-tr'>{job.duration}</span>
-                <p class='description description-work'>{job.description}</p>
+                <ul>
+                    {#each job.duties as duty}
+                        <li>{duty}</li>
+                    {/each}
+                </ul>
             </div>
             {/each}
         </section>
         {/if}
+        <section>
+        {#if resumeData.certifications }
+        <h2>Certifications</h2>
+        <hr />
+        {/if}
+        {#each resumeData.certifications as certification}
+        <div class="m-b">
+            <div class='rel'>
+                <h3>{certification.name}</h3>
+                <h4>{certification.issuer}</h4>
+                <span class='abs-tr'>{certification.duration}</span>
+            </div>
+        </div>
+        {/each}
+    </section>
         {#if resumeData.education }
         <section>
             <h2>Education History</h2>
             <hr />
             {#each resumeData.education as institution}
             <div class='rel'>
-                <h3>{institution.name}</h3>
+                <b>{institution.name}</b>
                 <span>{institution.location}</span>
                 <span class='abs-tr'>{institution.year}</span>
                 <h4 class='block'>{institution.degree}</h4>
@@ -62,6 +81,7 @@
 <style>
     h1 {
         font-size: 48px;
+        margin-top: 0;
     }
     h2 {
         margin-bottom: 0px;
@@ -71,9 +91,11 @@
         margin-bottom: 16px;
     }
     h3 {
-        margin-bottom: 8px;
+        margin: 0px;
     }
     h4 {
+        margin-top: 0;
+        font-weight: 450;
         display: inline;
     }
     h4.block {
@@ -84,6 +106,12 @@
     }
     section {
         margin-bottom: 32px;
+    }
+    ul {
+        margin: 8px 0 16px;
+    }
+    li {
+        margin: 4px 0;
     }
     .rel {
         position: relative;
@@ -99,5 +127,8 @@
     }
     .description-work {
         width: 85%;
+    }
+    .m-b {
+        margin-bottom: 16px;
     }
 </style>

@@ -457,8 +457,14 @@ var app = (function () {
     	return child_ctx;
     }
 
+    function get_each_context_2$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[7] = list[i];
+    	return child_ctx;
+    }
+
     // (12:8) {#if resumeData.jobs }
-    function create_if_block_1$2(ctx) {
+    function create_if_block_2$1(ctx) {
     	let h2;
 
     	const block = {
@@ -477,7 +483,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$2.name,
+    		id: create_if_block_2$1.name,
     		type: "if",
     		source: "(12:8) {#if resumeData.jobs }",
     		ctx
@@ -487,25 +493,25 @@ var app = (function () {
     }
 
     // (15:8) {#each resumeData.jobs as job}
-    function create_each_block_1$1(ctx) {
+    function create_each_block_2$1(ctx) {
     	let div;
     	let h3;
-    	let t0_value = /*job*/ ctx[4].title + "";
+    	let t0_value = /*job*/ ctx[7].title + "";
     	let t0;
     	let t1;
     	let span0;
-    	let t2_value = /*job*/ ctx[4].organization + "";
+    	let t2_value = /*job*/ ctx[7].organization + "";
     	let t2;
     	let t3;
-    	let t4_value = /*job*/ ctx[4].location + "";
+    	let t4_value = /*job*/ ctx[7].location + "";
     	let t4;
     	let t5;
     	let span1;
-    	let t6_value = /*job*/ ctx[4].duration + "";
+    	let t6_value = /*job*/ ctx[7].duration + "";
     	let t6;
     	let t7;
     	let p;
-    	let t8_value = /*job*/ ctx[4].description + "";
+    	let t8_value = /*job*/ ctx[7].description + "";
     	let t8;
 
     	const block = {
@@ -547,11 +553,103 @@ var app = (function () {
     			append_dev(p, t8);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*job*/ ctx[4].title + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*job*/ ctx[4].organization + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*job*/ ctx[4].location + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*job*/ ctx[4].duration + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*resumeData*/ 1 && t8_value !== (t8_value = /*job*/ ctx[4].description + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*job*/ ctx[7].title + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*job*/ ctx[7].organization + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*job*/ ctx[7].location + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*job*/ ctx[7].duration + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*resumeData*/ 1 && t8_value !== (t8_value = /*job*/ ctx[7].description + "")) set_data_dev(t8, t8_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2$1.name,
+    		type: "each",
+    		source: "(15:8) {#each resumeData.jobs as job}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (23:8) {#if resumeData.certifications }
+    function create_if_block_1$2(ctx) {
+    	let h2;
+
+    	const block = {
+    		c: function create() {
+    			h2 = element("h2");
+    			h2.textContent = "Certifications";
+    			add_location(h2, file$3, 23, 8, 621);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h2, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$2.name,
+    		type: "if",
+    		source: "(23:8) {#if resumeData.certifications }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (26:8) {#each resumeData.certifications as certification}
+    function create_each_block_1$1(ctx) {
+    	let div;
+    	let h3;
+    	let t0_value = /*certification*/ ctx[4].name + "";
+    	let t0;
+    	let t1;
+    	let span0;
+    	let t2_value = /*certification*/ ctx[4].issuer + "";
+    	let t2;
+    	let t3;
+    	let span1;
+    	let t4_value = /*certification*/ ctx[4].duration + "";
+    	let t4;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h3 = element("h3");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			span0 = element("span");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			span1 = element("span");
+    			t4 = text(t4_value);
+    			add_location(h3, file$3, 27, 12, 744);
+    			add_location(span0, file$3, 28, 12, 786);
+    			add_location(span1, file$3, 29, 12, 834);
+    			add_location(div, file$3, 26, 8, 726);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h3);
+    			append_dev(h3, t0);
+    			append_dev(div, t1);
+    			append_dev(div, span0);
+    			append_dev(span0, t2);
+    			append_dev(div, t3);
+    			append_dev(div, span1);
+    			append_dev(span1, t4);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*certification*/ ctx[4].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*certification*/ ctx[4].issuer + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*certification*/ ctx[4].duration + "")) set_data_dev(t4, t4_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -562,14 +660,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(15:8) {#each resumeData.jobs as job}",
+    		source: "(26:8) {#each resumeData.certifications as certification}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (23:8) {#if resumeData.education }
+    // (33:8) {#if resumeData.education }
     function create_if_block$2(ctx) {
     	let h2;
 
@@ -577,7 +675,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "Education History";
-    			add_location(h2, file$3, 23, 8, 616);
+    			add_location(h2, file$3, 33, 8, 947);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -591,14 +689,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(23:8) {#if resumeData.education }",
+    		source: "(33:8) {#if resumeData.education }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:8) {#each resumeData.education as institution}
+    // (36:8) {#each resumeData.education as institution}
     function create_each_block$1(ctx) {
     	let div;
     	let h3;
@@ -633,11 +731,11 @@ var app = (function () {
     			span2 = element("span");
     			t6 = text(t6_value);
     			t7 = space();
-    			add_location(h3, file$3, 27, 12, 735);
-    			add_location(span0, file$3, 28, 12, 775);
-    			add_location(span1, file$3, 29, 12, 823);
-    			add_location(span2, file$3, 30, 12, 869);
-    			add_location(div, file$3, 26, 8, 717);
+    			add_location(h3, file$3, 37, 12, 1066);
+    			add_location(span0, file$3, 38, 12, 1106);
+    			add_location(span1, file$3, 39, 12, 1154);
+    			add_location(span2, file$3, 40, 12, 1200);
+    			add_location(div, file$3, 36, 8, 1048);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -669,7 +767,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(26:8) {#each resumeData.education as institution}",
+    		source: "(36:8) {#each resumeData.education as institution}",
     		ctx
     	});
 
@@ -699,8 +797,19 @@ var app = (function () {
     	let t8;
     	let t9;
     	let t10;
-    	let if_block0 = /*resumeData*/ ctx[0].jobs && create_if_block_1$2(ctx);
-    	let each_value_1 = /*resumeData*/ ctx[0].jobs;
+    	let t11;
+    	let t12;
+    	let if_block0 = /*resumeData*/ ctx[0].jobs && create_if_block_2$1(ctx);
+    	let each_value_2 = /*resumeData*/ ctx[0].jobs;
+    	validate_each_argument(each_value_2);
+    	let each_blocks_2 = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_2[i] = create_each_block_2$1(get_each_context_2$1(ctx, each_value_2, i));
+    	}
+
+    	let if_block1 = /*resumeData*/ ctx[0].certifications && create_if_block_1$2(ctx);
+    	let each_value_1 = /*resumeData*/ ctx[0].certifications;
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -708,7 +817,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
     	}
 
-    	let if_block1 = /*resumeData*/ ctx[0].education && create_if_block$2(ctx);
+    	let if_block2 = /*resumeData*/ ctx[0].education && create_if_block$2(ctx);
     	let each_value = /*resumeData*/ ctx[0].education;
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -737,13 +846,21 @@ var app = (function () {
     			if (if_block0) if_block0.c();
     			t8 = space();
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].c();
     			}
 
     			t9 = space();
     			if (if_block1) if_block1.c();
     			t10 = space();
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t11 = space();
+    			if (if_block2) if_block2.c();
+    			t12 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
@@ -784,13 +901,21 @@ var app = (function () {
     			if (if_block0) if_block0.m(main, null);
     			append_dev(main, t8);
 
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(main, null);
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].m(main, null);
     			}
 
     			append_dev(main, t9);
     			if (if_block1) if_block1.m(main, null);
     			append_dev(main, t10);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(main, null);
+    			}
+
+    			append_dev(main, t11);
+    			if (if_block2) if_block2.m(main, null);
+    			append_dev(main, t12);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(main, null);
@@ -804,7 +929,7 @@ var app = (function () {
 
     			if (/*resumeData*/ ctx[0].jobs) {
     				if (if_block0) ; else {
-    					if_block0 = create_if_block_1$2(ctx);
+    					if_block0 = create_if_block_2$1(ctx);
     					if_block0.c();
     					if_block0.m(main, t8);
     				}
@@ -814,7 +939,42 @@ var app = (function () {
     			}
 
     			if (dirty & /*resumeData*/ 1) {
-    				each_value_1 = /*resumeData*/ ctx[0].jobs;
+    				each_value_2 = /*resumeData*/ ctx[0].jobs;
+    				validate_each_argument(each_value_2);
+    				let i;
+
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2$1(ctx, each_value_2, i);
+
+    					if (each_blocks_2[i]) {
+    						each_blocks_2[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_2[i] = create_each_block_2$1(child_ctx);
+    						each_blocks_2[i].c();
+    						each_blocks_2[i].m(main, t9);
+    					}
+    				}
+
+    				for (; i < each_blocks_2.length; i += 1) {
+    					each_blocks_2[i].d(1);
+    				}
+
+    				each_blocks_2.length = each_value_2.length;
+    			}
+
+    			if (/*resumeData*/ ctx[0].certifications) {
+    				if (if_block1) ; else {
+    					if_block1 = create_if_block_1$2(ctx);
+    					if_block1.c();
+    					if_block1.m(main, t10);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
+    			if (dirty & /*resumeData*/ 1) {
+    				each_value_1 = /*resumeData*/ ctx[0].certifications;
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -826,7 +986,7 @@ var app = (function () {
     					} else {
     						each_blocks_1[i] = create_each_block_1$1(child_ctx);
     						each_blocks_1[i].c();
-    						each_blocks_1[i].m(main, t9);
+    						each_blocks_1[i].m(main, t11);
     					}
     				}
 
@@ -838,14 +998,14 @@ var app = (function () {
     			}
 
     			if (/*resumeData*/ ctx[0].education) {
-    				if (if_block1) ; else {
-    					if_block1 = create_if_block$2(ctx);
-    					if_block1.c();
-    					if_block1.m(main, t10);
+    				if (if_block2) ; else {
+    					if_block2 = create_if_block$2(ctx);
+    					if_block2.c();
+    					if_block2.m(main, t12);
     				}
-    			} else if (if_block1) {
-    				if_block1.d(1);
-    				if_block1 = null;
+    			} else if (if_block2) {
+    				if_block2.d(1);
+    				if_block2 = null;
     			}
 
     			if (dirty & /*resumeData*/ 1) {
@@ -877,8 +1037,10 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(article);
     			if (if_block0) if_block0.d();
-    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks_2, detaching);
     			if (if_block1) if_block1.d();
+    			destroy_each(each_blocks_1, detaching);
+    			if (if_block2) if_block2.d();
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -966,6 +1128,18 @@ var app = (function () {
     	return child_ctx;
     }
 
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[7] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_3(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[10] = list[i];
+    	return child_ctx;
+    }
+
     // (5:4) {#if resumeData}
     function create_if_block$1(ctx) {
     	let header;
@@ -980,12 +1154,24 @@ var app = (function () {
     	let main;
     	let t5;
     	let t6;
-    	let if_block0 = /*resumeData*/ ctx[0].email && create_if_block_6(ctx);
-    	let if_block1 = /*resumeData*/ ctx[0].phone && create_if_block_5(ctx);
-    	let if_block2 = /*resumeData*/ ctx[0].website && create_if_block_4(ctx);
-    	let if_block3 = /*resumeData*/ ctx[0].bio && create_if_block_3(ctx);
-    	let if_block4 = /*resumeData*/ ctx[0].jobs && create_if_block_2(ctx);
-    	let if_block5 = /*resumeData*/ ctx[0].education && create_if_block_1$1(ctx);
+    	let section;
+    	let t7;
+    	let t8;
+    	let if_block0 = /*resumeData*/ ctx[0].email && create_if_block_7(ctx);
+    	let if_block1 = /*resumeData*/ ctx[0].phone && create_if_block_6(ctx);
+    	let if_block2 = /*resumeData*/ ctx[0].website && create_if_block_5(ctx);
+    	let if_block3 = /*resumeData*/ ctx[0].bio && create_if_block_4(ctx);
+    	let if_block4 = /*resumeData*/ ctx[0].jobs && create_if_block_3(ctx);
+    	let if_block5 = /*resumeData*/ ctx[0].certifications && create_if_block_2(ctx);
+    	let each_value_1 = /*resumeData*/ ctx[0].certifications;
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	let if_block6 = /*resumeData*/ ctx[0].education && create_if_block_1$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -1005,13 +1191,24 @@ var app = (function () {
     			t5 = space();
     			if (if_block4) if_block4.c();
     			t6 = space();
+    			section = element("section");
     			if (if_block5) if_block5.c();
-    			attr_dev(h1, "class", "svelte-d4pphw");
+    			t7 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t8 = space();
+    			if (if_block6) if_block6.c();
+    			attr_dev(h1, "class", "svelte-1lnm3el");
     			add_location(h1, file$2, 6, 8, 116);
-    			attr_dev(div, "class", "abs-tr svelte-d4pphw");
+    			attr_dev(div, "class", "abs-tr svelte-1lnm3el");
     			add_location(div, file$2, 7, 8, 151);
-    			attr_dev(header, "class", "rel svelte-d4pphw");
+    			attr_dev(header, "class", "rel svelte-1lnm3el");
     			add_location(header, file$2, 5, 4, 87);
+    			attr_dev(section, "class", "svelte-1lnm3el");
+    			add_location(section, file$2, 45, 8, 1254);
     			add_location(main, file$2, 19, 4, 482);
     		},
     		m: function mount(target, anchor) {
@@ -1031,7 +1228,16 @@ var app = (function () {
     			append_dev(main, t5);
     			if (if_block4) if_block4.m(main, null);
     			append_dev(main, t6);
-    			if (if_block5) if_block5.m(main, null);
+    			append_dev(main, section);
+    			if (if_block5) if_block5.m(section, null);
+    			append_dev(section, t7);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(section, null);
+    			}
+
+    			append_dev(main, t8);
+    			if (if_block6) if_block6.m(main, null);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*resumeData*/ ctx[0].name + "")) set_data_dev(t0, t0_value);
@@ -1040,7 +1246,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_6(ctx);
+    					if_block0 = create_if_block_7(ctx);
     					if_block0.c();
     					if_block0.m(div, t2);
     				}
@@ -1053,7 +1259,7 @@ var app = (function () {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
-    					if_block1 = create_if_block_5(ctx);
+    					if_block1 = create_if_block_6(ctx);
     					if_block1.c();
     					if_block1.m(div, t3);
     				}
@@ -1066,7 +1272,7 @@ var app = (function () {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
-    					if_block2 = create_if_block_4(ctx);
+    					if_block2 = create_if_block_5(ctx);
     					if_block2.c();
     					if_block2.m(div, null);
     				}
@@ -1079,7 +1285,7 @@ var app = (function () {
     				if (if_block3) {
     					if_block3.p(ctx, dirty);
     				} else {
-    					if_block3 = create_if_block_3(ctx);
+    					if_block3 = create_if_block_4(ctx);
     					if_block3.c();
     					if_block3.m(main, t5);
     				}
@@ -1092,7 +1298,7 @@ var app = (function () {
     				if (if_block4) {
     					if_block4.p(ctx, dirty);
     				} else {
-    					if_block4 = create_if_block_2(ctx);
+    					if_block4 = create_if_block_3(ctx);
     					if_block4.c();
     					if_block4.m(main, t6);
     				}
@@ -1101,258 +1307,19 @@ var app = (function () {
     				if_block4 = null;
     			}
 
-    			if (/*resumeData*/ ctx[0].education) {
-    				if (if_block5) {
-    					if_block5.p(ctx, dirty);
-    				} else {
-    					if_block5 = create_if_block_1$1(ctx);
+    			if (/*resumeData*/ ctx[0].certifications) {
+    				if (if_block5) ; else {
+    					if_block5 = create_if_block_2(ctx);
     					if_block5.c();
-    					if_block5.m(main, null);
+    					if_block5.m(section, t7);
     				}
     			} else if (if_block5) {
     				if_block5.d(1);
     				if_block5 = null;
     			}
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(header);
-    			if (if_block0) if_block0.d();
-    			if (if_block1) if_block1.d();
-    			if (if_block2) if_block2.d();
-    			if (detaching) detach_dev(t4);
-    			if (detaching) detach_dev(main);
-    			if (if_block3) if_block3.d();
-    			if (if_block4) if_block4.d();
-    			if (if_block5) if_block5.d();
-    		}
-    	};
 
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block$1.name,
-    		type: "if",
-    		source: "(5:4) {#if resumeData}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (9:12) {#if resumeData.email}
-    function create_if_block_6(ctx) {
-    	let p;
-    	let t_value = /*resumeData*/ ctx[0].email + "";
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			t = text(t_value);
-    			attr_dev(p, "class", "svelte-d4pphw");
-    			add_location(p, file$2, 9, 12, 219);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*resumeData*/ ctx[0].email + "")) set_data_dev(t, t_value);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_6.name,
-    		type: "if",
-    		source: "(9:12) {#if resumeData.email}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (12:12) {#if resumeData.phone}
-    function create_if_block_5(ctx) {
-    	let p;
-    	let t_value = /*resumeData*/ ctx[0].phone + "";
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			t = text(t_value);
-    			attr_dev(p, "class", "svelte-d4pphw");
-    			add_location(p, file$2, 12, 12, 310);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*resumeData*/ ctx[0].phone + "")) set_data_dev(t, t_value);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_5.name,
-    		type: "if",
-    		source: "(12:12) {#if resumeData.phone}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (15:12) {#if resumeData.website}
-    function create_if_block_4(ctx) {
-    	let p;
-    	let t_value = /*resumeData*/ ctx[0].website + "";
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			t = text(t_value);
-    			attr_dev(p, "class", "svelte-d4pphw");
-    			add_location(p, file$2, 15, 12, 403);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*resumeData*/ ctx[0].website + "")) set_data_dev(t, t_value);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_4.name,
-    		type: "if",
-    		source: "(15:12) {#if resumeData.website}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (21:8) {#if resumeData.bio }
-    function create_if_block_3(ctx) {
-    	let section;
-    	let h2;
-    	let t1;
-    	let hr;
-    	let t2;
-    	let p;
-    	let t3_value = /*resumeData*/ ctx[0].bio + "";
-    	let t3;
-
-    	const block = {
-    		c: function create() {
-    			section = element("section");
-    			h2 = element("h2");
-    			h2.textContent = "Bio";
-    			t1 = space();
-    			hr = element("hr");
-    			t2 = space();
-    			p = element("p");
-    			t3 = text(t3_value);
-    			attr_dev(h2, "class", "svelte-d4pphw");
-    			add_location(h2, file$2, 22, 12, 549);
-    			attr_dev(hr, "class", "svelte-d4pphw");
-    			add_location(hr, file$2, 23, 12, 574);
-    			attr_dev(p, "class", "description svelte-d4pphw");
-    			add_location(p, file$2, 24, 12, 593);
-    			attr_dev(section, "class", "svelte-d4pphw");
-    			add_location(section, file$2, 21, 8, 527);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			append_dev(section, h2);
-    			append_dev(section, t1);
-    			append_dev(section, hr);
-    			append_dev(section, t2);
-    			append_dev(section, p);
-    			append_dev(p, t3);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*resumeData*/ 1 && t3_value !== (t3_value = /*resumeData*/ ctx[0].bio + "")) set_data_dev(t3, t3_value);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(section);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_3.name,
-    		type: "if",
-    		source: "(21:8) {#if resumeData.bio }",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (28:8) {#if resumeData.jobs }
-    function create_if_block_2(ctx) {
-    	let section;
-    	let h2;
-    	let t1;
-    	let hr;
-    	let t2;
-    	let each_value_1 = /*resumeData*/ ctx[0].jobs;
-    	validate_each_argument(each_value_1);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-    	}
-
-    	const block = {
-    		c: function create() {
-    			section = element("section");
-    			h2 = element("h2");
-    			h2.textContent = "Work Experience";
-    			t1 = space();
-    			hr = element("hr");
-    			t2 = space();
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			attr_dev(h2, "class", "svelte-d4pphw");
-    			add_location(h2, file$2, 29, 12, 731);
-    			attr_dev(hr, "class", "svelte-d4pphw");
-    			add_location(hr, file$2, 30, 12, 768);
-    			attr_dev(section, "class", "svelte-d4pphw");
-    			add_location(section, file$2, 28, 8, 709);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			append_dev(section, h2);
-    			append_dev(section, t1);
-    			append_dev(section, hr);
-    			append_dev(section, t2);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(section, null);
-    			}
-    		},
-    		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1) {
-    				each_value_1 = /*resumeData*/ ctx[0].jobs;
+    				each_value_1 = /*resumeData*/ ctx[0].certifications;
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -1374,6 +1341,282 @@ var app = (function () {
 
     				each_blocks.length = each_value_1.length;
     			}
+
+    			if (/*resumeData*/ ctx[0].education) {
+    				if (if_block6) {
+    					if_block6.p(ctx, dirty);
+    				} else {
+    					if_block6 = create_if_block_1$1(ctx);
+    					if_block6.c();
+    					if_block6.m(main, null);
+    				}
+    			} else if (if_block6) {
+    				if_block6.d(1);
+    				if_block6 = null;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(header);
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
+    			if (if_block2) if_block2.d();
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(main);
+    			if (if_block3) if_block3.d();
+    			if (if_block4) if_block4.d();
+    			if (if_block5) if_block5.d();
+    			destroy_each(each_blocks, detaching);
+    			if (if_block6) if_block6.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(5:4) {#if resumeData}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (9:12) {#if resumeData.email}
+    function create_if_block_7(ctx) {
+    	let p;
+    	let t_value = /*resumeData*/ ctx[0].email + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "svelte-1lnm3el");
+    			add_location(p, file$2, 9, 12, 219);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*resumeData*/ ctx[0].email + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_7.name,
+    		type: "if",
+    		source: "(9:12) {#if resumeData.email}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (12:12) {#if resumeData.phone}
+    function create_if_block_6(ctx) {
+    	let p;
+    	let t_value = /*resumeData*/ ctx[0].phone + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "svelte-1lnm3el");
+    			add_location(p, file$2, 12, 12, 310);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*resumeData*/ ctx[0].phone + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_6.name,
+    		type: "if",
+    		source: "(12:12) {#if resumeData.phone}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (15:12) {#if resumeData.website}
+    function create_if_block_5(ctx) {
+    	let p;
+    	let t_value = /*resumeData*/ ctx[0].website + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t = text(t_value);
+    			attr_dev(p, "class", "svelte-1lnm3el");
+    			add_location(p, file$2, 15, 12, 403);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*resumeData*/ ctx[0].website + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_5.name,
+    		type: "if",
+    		source: "(15:12) {#if resumeData.website}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (21:8) {#if resumeData.bio }
+    function create_if_block_4(ctx) {
+    	let section;
+    	let h2;
+    	let t1;
+    	let hr;
+    	let t2;
+    	let p;
+    	let t3_value = /*resumeData*/ ctx[0].bio + "";
+    	let t3;
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			h2 = element("h2");
+    			h2.textContent = "Bio";
+    			t1 = space();
+    			hr = element("hr");
+    			t2 = space();
+    			p = element("p");
+    			t3 = text(t3_value);
+    			attr_dev(h2, "class", "svelte-1lnm3el");
+    			add_location(h2, file$2, 22, 12, 549);
+    			attr_dev(hr, "class", "svelte-1lnm3el");
+    			add_location(hr, file$2, 23, 12, 574);
+    			attr_dev(p, "class", "description svelte-1lnm3el");
+    			add_location(p, file$2, 24, 12, 593);
+    			attr_dev(section, "class", "svelte-1lnm3el");
+    			add_location(section, file$2, 21, 8, 527);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			append_dev(section, h2);
+    			append_dev(section, t1);
+    			append_dev(section, hr);
+    			append_dev(section, t2);
+    			append_dev(section, p);
+    			append_dev(p, t3);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t3_value !== (t3_value = /*resumeData*/ ctx[0].bio + "")) set_data_dev(t3, t3_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_4.name,
+    		type: "if",
+    		source: "(21:8) {#if resumeData.bio }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (28:8) {#if resumeData.jobs }
+    function create_if_block_3(ctx) {
+    	let section;
+    	let h2;
+    	let t1;
+    	let hr;
+    	let t2;
+    	let each_value_2 = /*resumeData*/ ctx[0].jobs;
+    	validate_each_argument(each_value_2);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			h2 = element("h2");
+    			h2.textContent = "Work Experience";
+    			t1 = space();
+    			hr = element("hr");
+    			t2 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(h2, "class", "svelte-1lnm3el");
+    			add_location(h2, file$2, 29, 12, 731);
+    			attr_dev(hr, "class", "svelte-1lnm3el");
+    			add_location(hr, file$2, 30, 12, 768);
+    			attr_dev(section, "class", "svelte-1lnm3el");
+    			add_location(section, file$2, 28, 8, 709);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			append_dev(section, h2);
+    			append_dev(section, t1);
+    			append_dev(section, hr);
+    			append_dev(section, t2);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(section, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1) {
+    				each_value_2 = /*resumeData*/ ctx[0].jobs;
+    				validate_each_argument(each_value_2);
+    				let i;
+
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(section, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_2.length;
+    			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(section);
@@ -1383,7 +1626,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_3.name,
     		type: "if",
     		source: "(28:8) {#if resumeData.jobs }",
     		ctx
@@ -1392,29 +1635,70 @@ var app = (function () {
     	return block;
     }
 
+    // (38:20) {#each job.duties as duty}
+    function create_each_block_3(ctx) {
+    	let li;
+    	let t_value = /*duty*/ ctx[10] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			attr_dev(li, "class", "svelte-1lnm3el");
+    			add_location(li, file$2, 38, 24, 1108);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t_value !== (t_value = /*duty*/ ctx[10] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_3.name,
+    		type: "each",
+    		source: "(38:20) {#each job.duties as duty}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     // (32:12) {#each resumeData.jobs as job}
-    function create_each_block_1(ctx) {
+    function create_each_block_2(ctx) {
     	let div;
     	let h3;
-    	let t0_value = /*job*/ ctx[4].title + "";
+    	let t0_value = /*job*/ ctx[7].title + "";
     	let t0;
     	let t1;
     	let h4;
-    	let t2_value = /*job*/ ctx[4].organization + "";
+    	let t2_value = /*job*/ ctx[7].organization + "";
     	let t2;
     	let t3;
     	let span0;
-    	let t4_value = /*job*/ ctx[4].location + "";
+    	let t4_value = /*job*/ ctx[7].location + "";
     	let t4;
     	let t5;
     	let span1;
-    	let t6_value = /*job*/ ctx[4].duration + "";
+    	let t6_value = /*job*/ ctx[7].duration + "";
     	let t6;
     	let t7;
-    	let p;
-    	let t8_value = /*job*/ ctx[4].description + "";
+    	let ul;
     	let t8;
-    	let t9;
+    	let each_value_3 = /*job*/ ctx[7].duties;
+    	validate_each_argument(each_value_3);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_3.length; i += 1) {
+    		each_blocks[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
+    	}
 
     	const block = {
     		c: function create() {
@@ -1424,26 +1708,30 @@ var app = (function () {
     			t1 = space();
     			h4 = element("h4");
     			t2 = text(t2_value);
-    			t3 = text(" - ");
+    			t3 = space();
     			span0 = element("span");
     			t4 = text(t4_value);
     			t5 = space();
     			span1 = element("span");
     			t6 = text(t6_value);
     			t7 = space();
-    			p = element("p");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			attr_dev(h3, "class", "svelte-d4pphw");
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t8 = space();
+    			attr_dev(h3, "class", "svelte-1lnm3el");
     			add_location(h3, file$2, 33, 16, 864);
-    			attr_dev(h4, "class", "svelte-d4pphw");
+    			attr_dev(h4, "class", "svelte-1lnm3el");
     			add_location(h4, file$2, 34, 16, 901);
-    			add_location(span0, file$2, 34, 46, 931);
-    			attr_dev(span1, "class", "abs-tr svelte-d4pphw");
-    			add_location(span1, file$2, 35, 16, 975);
-    			attr_dev(p, "class", "description description-work svelte-d4pphw");
-    			add_location(p, file$2, 36, 16, 1034);
-    			attr_dev(div, "class", "rel svelte-d4pphw");
+    			add_location(span0, file$2, 34, 44, 929);
+    			attr_dev(span1, "class", "abs-tr svelte-1lnm3el");
+    			add_location(span1, file$2, 35, 16, 973);
+    			attr_dev(ul, "class", "svelte-1lnm3el");
+    			add_location(ul, file$2, 36, 16, 1032);
+    			attr_dev(div, "class", "rel svelte-1lnm3el");
     			add_location(div, file$2, 32, 12, 830);
     		},
     		m: function mount(target, anchor) {
@@ -1460,25 +1748,53 @@ var app = (function () {
     			append_dev(div, span1);
     			append_dev(span1, t6);
     			append_dev(div, t7);
-    			append_dev(div, p);
-    			append_dev(p, t8);
-    			append_dev(div, t9);
+    			append_dev(div, ul);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			append_dev(div, t8);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*job*/ ctx[4].title + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*job*/ ctx[4].organization + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*job*/ ctx[4].location + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*job*/ ctx[4].duration + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*resumeData*/ 1 && t8_value !== (t8_value = /*job*/ ctx[4].description + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*job*/ ctx[7].title + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*job*/ ctx[7].organization + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*job*/ ctx[7].location + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*job*/ ctx[7].duration + "")) set_data_dev(t6, t6_value);
+
+    			if (dirty & /*resumeData*/ 1) {
+    				each_value_3 = /*job*/ ctx[7].duties;
+    				validate_each_argument(each_value_3);
+    				let i;
+
+    				for (i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_3(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_3.length;
+    			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_1.name,
+    		id: create_each_block_2.name,
     		type: "each",
     		source: "(32:12) {#each resumeData.jobs as job}",
     		ctx
@@ -1487,7 +1803,122 @@ var app = (function () {
     	return block;
     }
 
-    // (42:8) {#if resumeData.education }
+    // (47:8) {#if resumeData.certifications }
+    function create_if_block_2(ctx) {
+    	let h2;
+    	let t1;
+    	let hr;
+
+    	const block = {
+    		c: function create() {
+    			h2 = element("h2");
+    			h2.textContent = "Certifications";
+    			t1 = space();
+    			hr = element("hr");
+    			attr_dev(h2, "class", "svelte-1lnm3el");
+    			add_location(h2, file$2, 47, 8, 1313);
+    			attr_dev(hr, "class", "svelte-1lnm3el");
+    			add_location(hr, file$2, 48, 8, 1345);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h2, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, hr, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h2);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(hr);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(47:8) {#if resumeData.certifications }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (51:8) {#each resumeData.certifications as certification}
+    function create_each_block_1(ctx) {
+    	let div1;
+    	let div0;
+    	let h3;
+    	let t0_value = /*certification*/ ctx[4].name + "";
+    	let t0;
+    	let t1;
+    	let h4;
+    	let t2_value = /*certification*/ ctx[4].issuer + "";
+    	let t2;
+    	let t3;
+    	let span;
+    	let t4_value = /*certification*/ ctx[4].duration + "";
+    	let t4;
+    	let t5;
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+    			h3 = element("h3");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			h4 = element("h4");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			span = element("span");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			attr_dev(h3, "class", "svelte-1lnm3el");
+    			add_location(h3, file$2, 53, 16, 1497);
+    			attr_dev(h4, "class", "svelte-1lnm3el");
+    			add_location(h4, file$2, 54, 16, 1543);
+    			attr_dev(span, "class", "abs-tr svelte-1lnm3el");
+    			add_location(span, file$2, 55, 16, 1591);
+    			attr_dev(div0, "class", "rel svelte-1lnm3el");
+    			add_location(div0, file$2, 52, 12, 1463);
+    			attr_dev(div1, "class", "m-b svelte-1lnm3el");
+    			add_location(div1, file$2, 51, 8, 1433);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, h3);
+    			append_dev(h3, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, h4);
+    			append_dev(h4, t2);
+    			append_dev(div0, t3);
+    			append_dev(div0, span);
+    			append_dev(span, t4);
+    			append_dev(div1, t5);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*certification*/ ctx[4].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*certification*/ ctx[4].issuer + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*certification*/ ctx[4].duration + "")) set_data_dev(t4, t4_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(51:8) {#each resumeData.certifications as certification}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (61:8) {#if resumeData.education }
     function create_if_block_1$1(ctx) {
     	let section;
     	let h2;
@@ -1515,12 +1946,12 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h2, "class", "svelte-d4pphw");
-    			add_location(h2, file$2, 43, 12, 1234);
-    			attr_dev(hr, "class", "svelte-d4pphw");
-    			add_location(hr, file$2, 44, 12, 1273);
-    			attr_dev(section, "class", "svelte-d4pphw");
-    			add_location(section, file$2, 42, 8, 1212);
+    			attr_dev(h2, "class", "svelte-1lnm3el");
+    			add_location(h2, file$2, 62, 12, 1775);
+    			attr_dev(hr, "class", "svelte-1lnm3el");
+    			add_location(hr, file$2, 63, 12, 1814);
+    			attr_dev(section, "class", "svelte-1lnm3el");
+    			add_location(section, file$2, 61, 8, 1753);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -1568,17 +1999,17 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(42:8) {#if resumeData.education }",
+    		source: "(61:8) {#if resumeData.education }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:12) {#each resumeData.education as institution}
+    // (65:12) {#each resumeData.education as institution}
     function create_each_block(ctx) {
     	let div;
-    	let h3;
+    	let b;
     	let t0_value = /*institution*/ ctx[1].name + "";
     	let t0;
     	let t1;
@@ -1598,7 +2029,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			h3 = element("h3");
+    			b = element("b");
     			t0 = text(t0_value);
     			t1 = space();
     			span0 = element("span");
@@ -1610,20 +2041,19 @@ var app = (function () {
     			h4 = element("h4");
     			t6 = text(t6_value);
     			t7 = space();
-    			attr_dev(h3, "class", "svelte-d4pphw");
-    			add_location(h3, file$2, 47, 16, 1382);
-    			add_location(span0, file$2, 48, 16, 1426);
-    			attr_dev(span1, "class", "abs-tr svelte-d4pphw");
-    			add_location(span1, file$2, 49, 16, 1478);
-    			attr_dev(h4, "class", "block svelte-d4pphw");
-    			add_location(h4, file$2, 50, 16, 1541);
-    			attr_dev(div, "class", "rel svelte-d4pphw");
-    			add_location(div, file$2, 46, 12, 1348);
+    			add_location(b, file$2, 66, 16, 1923);
+    			add_location(span0, file$2, 67, 16, 1965);
+    			attr_dev(span1, "class", "abs-tr svelte-1lnm3el");
+    			add_location(span1, file$2, 68, 16, 2017);
+    			attr_dev(h4, "class", "block svelte-1lnm3el");
+    			add_location(h4, file$2, 69, 16, 2080);
+    			attr_dev(div, "class", "rel svelte-1lnm3el");
+    			add_location(div, file$2, 65, 12, 1889);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, h3);
-    			append_dev(h3, t0);
+    			append_dev(div, b);
+    			append_dev(b, t0);
     			append_dev(div, t1);
     			append_dev(div, span0);
     			append_dev(span0, t2);
@@ -1650,7 +2080,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(46:12) {#each resumeData.education as institution}",
+    		source: "(65:12) {#each resumeData.education as institution}",
     		ctx
     	});
 
@@ -1864,7 +2294,7 @@ var app = (function () {
     	}
     }
 
-    var name="John Doe";var email="johndoe@email.com";var phone="123-456-7890";var website="johndoe.com";var bio="Cras dapibus. Vivamus in erat ut urna cursus vestibulum. In hac habitasse platea dictumst. Etiam feugiat lorem non metus. Donec posuere vulputate arcu. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Ut leo. Nullam sagittis. Vivamus quis mi. In ut quam vitae odio lacinia tincidunt. Cras varius. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Quisque id odio. Pellentesque auctor neque nec urna. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Cras sagittis. Fusce fermentum. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras sagittis.";var jobs=[{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2014 - 2018",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."},{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2010 - 2014",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."},{title:"Cashier",organization:"What-A-Burger",location:"Stanford, CA",duration:"2006 - 2010",description:"Fusce ac felis sit amet ligula pharetra condimentum. Praesent venenatis metus at tortor pulvinar varius. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Praesent ac sem eget est egestas volutpat."}];var education=[{name:"ITT Technical Institute",location:"New York, NY",year:"1998",degree:"Bachelor of Arts, Communications"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,education:education};
+    var name="Zach Graceffa";var email="zach@zachgraceffa.com";var phone="414-699-1984";var website="zachgraceffa.com";var bio="As a developer with over 10 years of experience, I have worked in positions from junior developer to tech lead. In this time I have garnered specialties in search & discovery, eCommerce marketplaces, and DevOps. While my specialties are back-end focused, I am also a proficient front-end developer with a strong understanding of Javascript. I enjoy working in Agile/Scrum environments; from either precise or top-level requirements; and with team members from multiple disciplines such as UX designers, creative designers, project managers, and other developers. For personal projects I enjoy developing with Node.Js.";var jobs=[{title:"Tech Lead",organization:"BlueBolt Solutions",location:"Chicago, IL, USA",duration:"2019 - Present",description:"Lead web and eCommerce projects on teams of 4-5 people in a full-stack capacity. Projects include technologies such as Optimizely CMS & Commerce, both .NET platforms; Bravo search, a proprietary ElasticSearch application using React; OpenId Connect SSO; and Azure Devops. In addition I have coded multiple microsites using React and Typescript.",duties:["Lead Optimizely Content Cloud and Optimizely Commerce Cloud projects on teams of 4-5 people.","Use Optimizely Search & Navigation to create complex search & discovery features.","Integrate with PayPal and Stripe payment systems.","Perform upgrades from .Net Framework to .Net Core and Optimizely 11 to 12.","Optimize computations using advanced understanding of multi-threading in .Net.","Use Azure DevOps to configure CI/CD Pipelines and Releases for Optimizely DXP Deployment API.","Implement SSO integrations with client systems using Microsoft Identity.","Use Node.js and state management/templating systems such as React.js to launch microsites."]},{title:"Senior Developer",organization:"Restful Brilliance",location:"Remote",duration:"2018 - 2019",description:"Worked extensively with complex ElasticSearch solutions. Advising clients on and developing with Optimizely CMS, Optimizely Commerce, and Optimizely Search and Navigation. Created eCommerce checkout flows in Vue.js with Optimizely Commerce and PayPal payment providers.",duties:["Wrote proficient code in Optimizely Content Cloud and Optimizely Commerce Cloud.","Used Vue.js to write a single-page checkout flow for an eCommerce marketplace.","Implemented a complex Elastic Search solution for an catalog with 500,000 SKUs.","Integrated with InRiver and Stibo Systems PIM solutions to maintain catalog data/inventory.","Write and maintain unit testing for custom code."]},{title:"Solutions Developer",organization:"Making Waves/Nansen Inc.",location:"Chicago, IL, USA",duration:"2014 - 2018",description:"In my first professional development position, I refined my skills in .Net and Javascript. In addition, my expertise in Optimizely Commerce gave me the opportunity to work at our headquarters in Oslo, Norway on the website for their main standards organization: standard.no.",duties:["Learned Optimizely Content Cloud, Optimizely Commerce Cloud, and Optimizely Search & Navigation.","Implemented Object-Oriented design patterns to make solutions scalable and easier to maintain.","Wrote a commerce customization to delegate multiple shipments per order based on warehouse inventory."]}];var certifications=[{name:"Commerce Cloud Developer",issuer:"Optimizely",duration:"Mar, 2021 - Mar, 2023"},{name:"Content Cloud Developer",issuer:"Optimizely",duration:"Mar, 2022 - Jan, 2025"}];var education=[{name:"DePaul University",location:"Chicago, IL, USA",year:"2010 - 2014",degree:"Bachelor of Science, Computer Science"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,certifications:certifications,education:education};
 
     /* src/App.svelte generated by Svelte v3.49.0 */
     const file = "src/App.svelte";
@@ -2071,7 +2501,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(letterpaper.$$.fragment);
-    			add_location(main, file, 10, 0, 368);
+    			add_location(main, file, 10, 0, 370);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2201,7 +2631,7 @@ var app = (function () {
         target: document.body,
         props: {
             resumeType: 'Base',
-            resumeJsonFile: 'john-doe'
+            resumeJsonFile: 'optimizely'
         }
     });
 

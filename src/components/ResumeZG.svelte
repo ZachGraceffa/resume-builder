@@ -22,6 +22,16 @@
             <p>{job.description}</p>
         </div>
         {/each}
+        {#if resumeData.certifications }
+        <h2>Certifications</h2>
+        {/if}
+        {#each resumeData.certifications as certification}
+        <div>
+            <h3>{certification.name}</h3>
+            <span>{certification.issuer}</span>
+            <span>{certification.duration}</span>
+        </div>
+        {/each}
         {#if resumeData.education }
         <h2>Education History</h2>
         {/if}

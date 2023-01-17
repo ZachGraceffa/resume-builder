@@ -5,6 +5,7 @@ export interface Resume {
     website: string,
     bio: string,
     jobs: Job[],
+    certifications: Certification[],
     education: Institution[]
 }
 
@@ -13,7 +14,14 @@ interface Job {
     organization: string,
     location: string,
     duration: string,
-    description: string
+    description: string,
+    duties: string[]
+}
+
+interface Certification {
+    name: string,
+    issuer: string,
+    duration: string
 }
 
 interface Institution {
