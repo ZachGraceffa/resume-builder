@@ -7,7 +7,7 @@
 	import ResumeTemplateBase from './components/BaseResume.svelte'
 	import LetterPaper from './components/LetterPaper.svelte'
 	import type { Resume } from './types/Resume'
-	import resumeJson from '../public/resumes/optimizely.json'
+	import resumeJson from '../public/resumes/elastic.json'
 
 	let resumeData = resumeJson as Resume
 </script>

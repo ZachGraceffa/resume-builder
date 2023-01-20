@@ -1162,7 +1162,7 @@ var app = (function () {
     	let if_block2 = /*resumeData*/ ctx[0].website && create_if_block_5(ctx);
     	let if_block3 = /*resumeData*/ ctx[0].bio && create_if_block_4(ctx);
     	let if_block4 = /*resumeData*/ ctx[0].jobs && create_if_block_3(ctx);
-    	let if_block5 = /*resumeData*/ ctx[0].certifications && create_if_block_2(ctx);
+    	let if_block5 = /*resumeData*/ ctx[0].certifications && /*resumeData*/ ctx[0].certifications.length && create_if_block_2(ctx);
     	let each_value_1 = /*resumeData*/ ctx[0].certifications;
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
@@ -1201,13 +1201,13 @@ var app = (function () {
 
     			t8 = space();
     			if (if_block6) if_block6.c();
-    			attr_dev(h1, "class", "svelte-1lnm3el");
+    			attr_dev(h1, "class", "svelte-16dbrbo");
     			add_location(h1, file$2, 6, 8, 116);
-    			attr_dev(div, "class", "abs-tr svelte-1lnm3el");
+    			attr_dev(div, "class", "abs-tr svelte-16dbrbo");
     			add_location(div, file$2, 7, 8, 151);
-    			attr_dev(header, "class", "rel svelte-1lnm3el");
+    			attr_dev(header, "class", "rel svelte-16dbrbo");
     			add_location(header, file$2, 5, 4, 87);
-    			attr_dev(section, "class", "svelte-1lnm3el");
+    			attr_dev(section, "class", "svelte-16dbrbo");
     			add_location(section, file$2, 45, 8, 1254);
     			add_location(main, file$2, 19, 4, 482);
     		},
@@ -1307,7 +1307,7 @@ var app = (function () {
     				if_block4 = null;
     			}
 
-    			if (/*resumeData*/ ctx[0].certifications) {
+    			if (/*resumeData*/ ctx[0].certifications && /*resumeData*/ ctx[0].certifications.length) {
     				if (if_block5) ; else {
     					if_block5 = create_if_block_2(ctx);
     					if_block5.c();
@@ -1391,7 +1391,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-1lnm3el");
+    			attr_dev(p, "class", "svelte-16dbrbo");
     			add_location(p, file$2, 9, 12, 219);
     		},
     		m: function mount(target, anchor) {
@@ -1427,7 +1427,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-1lnm3el");
+    			attr_dev(p, "class", "svelte-16dbrbo");
     			add_location(p, file$2, 12, 12, 310);
     		},
     		m: function mount(target, anchor) {
@@ -1463,7 +1463,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			attr_dev(p, "class", "svelte-1lnm3el");
+    			attr_dev(p, "class", "svelte-16dbrbo");
     			add_location(p, file$2, 15, 12, 403);
     		},
     		m: function mount(target, anchor) {
@@ -1510,13 +1510,13 @@ var app = (function () {
     			t2 = space();
     			p = element("p");
     			t3 = text(t3_value);
-    			attr_dev(h2, "class", "svelte-1lnm3el");
+    			attr_dev(h2, "class", "svelte-16dbrbo");
     			add_location(h2, file$2, 22, 12, 549);
-    			attr_dev(hr, "class", "svelte-1lnm3el");
+    			attr_dev(hr, "class", "svelte-16dbrbo");
     			add_location(hr, file$2, 23, 12, 574);
-    			attr_dev(p, "class", "description svelte-1lnm3el");
+    			attr_dev(p, "class", "description svelte-16dbrbo");
     			add_location(p, file$2, 24, 12, 593);
-    			attr_dev(section, "class", "svelte-1lnm3el");
+    			attr_dev(section, "class", "svelte-16dbrbo");
     			add_location(section, file$2, 21, 8, 527);
     		},
     		m: function mount(target, anchor) {
@@ -1575,11 +1575,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h2, "class", "svelte-1lnm3el");
+    			attr_dev(h2, "class", "svelte-16dbrbo");
     			add_location(h2, file$2, 29, 12, 731);
-    			attr_dev(hr, "class", "svelte-1lnm3el");
+    			attr_dev(hr, "class", "svelte-16dbrbo");
     			add_location(hr, file$2, 30, 12, 768);
-    			attr_dev(section, "class", "svelte-1lnm3el");
+    			attr_dev(section, "class", "svelte-16dbrbo");
     			add_location(section, file$2, 28, 8, 709);
     		},
     		m: function mount(target, anchor) {
@@ -1645,7 +1645,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			attr_dev(li, "class", "svelte-1lnm3el");
+    			attr_dev(li, "class", "svelte-16dbrbo");
     			add_location(li, file$2, 38, 24, 1108);
     		},
     		m: function mount(target, anchor) {
@@ -1722,16 +1722,16 @@ var app = (function () {
     			}
 
     			t8 = space();
-    			attr_dev(h3, "class", "svelte-1lnm3el");
+    			attr_dev(h3, "class", "svelte-16dbrbo");
     			add_location(h3, file$2, 33, 16, 864);
-    			attr_dev(h4, "class", "svelte-1lnm3el");
+    			attr_dev(h4, "class", "svelte-16dbrbo");
     			add_location(h4, file$2, 34, 16, 901);
     			add_location(span0, file$2, 34, 44, 929);
-    			attr_dev(span1, "class", "abs-tr svelte-1lnm3el");
+    			attr_dev(span1, "class", "abs-tr svelte-16dbrbo");
     			add_location(span1, file$2, 35, 16, 973);
-    			attr_dev(ul, "class", "svelte-1lnm3el");
+    			attr_dev(ul, "class", "svelte-16dbrbo");
     			add_location(ul, file$2, 36, 16, 1032);
-    			attr_dev(div, "class", "rel svelte-1lnm3el");
+    			attr_dev(div, "class", "rel svelte-16dbrbo");
     			add_location(div, file$2, 32, 12, 830);
     		},
     		m: function mount(target, anchor) {
@@ -1803,7 +1803,7 @@ var app = (function () {
     	return block;
     }
 
-    // (47:8) {#if resumeData.certifications }
+    // (47:8) {#if resumeData.certifications  && resumeData.certifications.length}
     function create_if_block_2(ctx) {
     	let h2;
     	let t1;
@@ -1815,10 +1815,10 @@ var app = (function () {
     			h2.textContent = "Certifications";
     			t1 = space();
     			hr = element("hr");
-    			attr_dev(h2, "class", "svelte-1lnm3el");
-    			add_location(h2, file$2, 47, 8, 1313);
-    			attr_dev(hr, "class", "svelte-1lnm3el");
-    			add_location(hr, file$2, 48, 8, 1345);
+    			attr_dev(h2, "class", "svelte-16dbrbo");
+    			add_location(h2, file$2, 47, 8, 1349);
+    			attr_dev(hr, "class", "svelte-16dbrbo");
+    			add_location(hr, file$2, 48, 8, 1381);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -1836,7 +1836,7 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(47:8) {#if resumeData.certifications }",
+    		source: "(47:8) {#if resumeData.certifications  && resumeData.certifications.length}",
     		ctx
     	});
 
@@ -1873,16 +1873,16 @@ var app = (function () {
     			span = element("span");
     			t4 = text(t4_value);
     			t5 = space();
-    			attr_dev(h3, "class", "svelte-1lnm3el");
-    			add_location(h3, file$2, 53, 16, 1497);
-    			attr_dev(h4, "class", "svelte-1lnm3el");
-    			add_location(h4, file$2, 54, 16, 1543);
-    			attr_dev(span, "class", "abs-tr svelte-1lnm3el");
-    			add_location(span, file$2, 55, 16, 1591);
-    			attr_dev(div0, "class", "rel svelte-1lnm3el");
-    			add_location(div0, file$2, 52, 12, 1463);
-    			attr_dev(div1, "class", "m-b svelte-1lnm3el");
-    			add_location(div1, file$2, 51, 8, 1433);
+    			attr_dev(h3, "class", "svelte-16dbrbo");
+    			add_location(h3, file$2, 53, 16, 1533);
+    			attr_dev(h4, "class", "svelte-16dbrbo");
+    			add_location(h4, file$2, 54, 16, 1579);
+    			attr_dev(span, "class", "abs-tr svelte-16dbrbo");
+    			add_location(span, file$2, 55, 16, 1627);
+    			attr_dev(div0, "class", "rel svelte-16dbrbo");
+    			add_location(div0, file$2, 52, 12, 1499);
+    			attr_dev(div1, "class", "m-b svelte-16dbrbo");
+    			add_location(div1, file$2, 51, 8, 1469);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1946,12 +1946,12 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h2, "class", "svelte-1lnm3el");
-    			add_location(h2, file$2, 62, 12, 1775);
-    			attr_dev(hr, "class", "svelte-1lnm3el");
-    			add_location(hr, file$2, 63, 12, 1814);
-    			attr_dev(section, "class", "svelte-1lnm3el");
-    			add_location(section, file$2, 61, 8, 1753);
+    			attr_dev(h2, "class", "svelte-16dbrbo");
+    			add_location(h2, file$2, 62, 12, 1811);
+    			attr_dev(hr, "class", "svelte-16dbrbo");
+    			add_location(hr, file$2, 63, 12, 1850);
+    			attr_dev(section, "class", "svelte-16dbrbo");
+    			add_location(section, file$2, 61, 8, 1789);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -2009,7 +2009,7 @@ var app = (function () {
     // (65:12) {#each resumeData.education as institution}
     function create_each_block(ctx) {
     	let div;
-    	let b;
+    	let b0;
     	let t0_value = /*institution*/ ctx[1].name + "";
     	let t0;
     	let t1;
@@ -2025,11 +2025,17 @@ var app = (function () {
     	let t6_value = /*institution*/ ctx[1].degree + "";
     	let t6;
     	let t7;
+    	let span2;
+    	let b1;
+    	let t9;
+    	let t10_value = /*institution*/ ctx[1].languagePath + "";
+    	let t10;
+    	let t11;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			b = element("b");
+    			b0 = element("b");
     			t0 = text(t0_value);
     			t1 = space();
     			span0 = element("span");
@@ -2041,19 +2047,27 @@ var app = (function () {
     			h4 = element("h4");
     			t6 = text(t6_value);
     			t7 = space();
-    			add_location(b, file$2, 66, 16, 1923);
-    			add_location(span0, file$2, 67, 16, 1965);
-    			attr_dev(span1, "class", "abs-tr svelte-1lnm3el");
-    			add_location(span1, file$2, 68, 16, 2017);
-    			attr_dev(h4, "class", "block svelte-1lnm3el");
-    			add_location(h4, file$2, 69, 16, 2080);
-    			attr_dev(div, "class", "rel svelte-1lnm3el");
-    			add_location(div, file$2, 65, 12, 1889);
+    			span2 = element("span");
+    			b1 = element("b");
+    			b1.textContent = "Language Path:";
+    			t9 = space();
+    			t10 = text(t10_value);
+    			t11 = space();
+    			add_location(b0, file$2, 66, 16, 1959);
+    			add_location(span0, file$2, 67, 16, 2001);
+    			attr_dev(span1, "class", "abs-tr svelte-16dbrbo");
+    			add_location(span1, file$2, 68, 16, 2053);
+    			attr_dev(h4, "class", "block mb-1 svelte-16dbrbo");
+    			add_location(h4, file$2, 69, 16, 2116);
+    			add_location(b1, file$2, 70, 22, 2187);
+    			add_location(span2, file$2, 70, 16, 2181);
+    			attr_dev(div, "class", "rel svelte-16dbrbo");
+    			add_location(div, file$2, 65, 12, 1925);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, b);
-    			append_dev(b, t0);
+    			append_dev(div, b0);
+    			append_dev(b0, t0);
     			append_dev(div, t1);
     			append_dev(div, span0);
     			append_dev(span0, t2);
@@ -2064,12 +2078,18 @@ var app = (function () {
     			append_dev(div, h4);
     			append_dev(h4, t6);
     			append_dev(div, t7);
+    			append_dev(div, span2);
+    			append_dev(span2, b1);
+    			append_dev(span2, t9);
+    			append_dev(span2, t10);
+    			append_dev(div, t11);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*institution*/ ctx[1].name + "")) set_data_dev(t0, t0_value);
     			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*institution*/ ctx[1].location + "")) set_data_dev(t2, t2_value);
     			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*institution*/ ctx[1].year + "")) set_data_dev(t4, t4_value);
     			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*institution*/ ctx[1].degree + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*resumeData*/ 1 && t10_value !== (t10_value = /*institution*/ ctx[1].languagePath + "")) set_data_dev(t10, t10_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
@@ -2294,7 +2314,7 @@ var app = (function () {
     	}
     }
 
-    var name="Zach Graceffa";var email="zach@zachgraceffa.com";var phone="414-699-1984";var website="zachgraceffa.com";var bio="As a developer with over 10 years of experience, I have worked in positions from junior developer to tech lead. In this time I have garnered specialties in search & discovery, eCommerce marketplaces, and DevOps. While my specialties are back-end focused, I am also a proficient front-end developer with a strong understanding of Javascript. I enjoy working in Agile/Scrum environments; from either precise or top-level requirements; and with team members from multiple disciplines such as UX designers, creative designers, project managers, and other developers. For personal projects I enjoy developing with Node.Js.";var jobs=[{title:"Tech Lead",organization:"BlueBolt Solutions",location:"Chicago, IL, USA",duration:"2019 - Present",description:"Lead web and eCommerce projects on teams of 4-5 people in a full-stack capacity. Projects include technologies such as Optimizely CMS & Commerce, both .NET platforms; Bravo search, a proprietary ElasticSearch application using React; OpenId Connect SSO; and Azure Devops. In addition I have coded multiple microsites using React and Typescript.",duties:["Lead Optimizely Content Cloud and Optimizely Commerce Cloud projects on teams of 4-5 people.","Use Optimizely Search & Navigation to create complex search & discovery features.","Integrate with PayPal and Stripe payment systems.","Perform upgrades from .Net Framework to .Net Core and Optimizely 11 to 12.","Optimize computations using advanced understanding of multi-threading in .Net.","Use Azure DevOps to configure CI/CD Pipelines and Releases for Optimizely DXP Deployment API.","Implement SSO integrations with client systems using Microsoft Identity.","Use Node.js and state management/templating systems such as React.js to launch microsites."]},{title:"Senior Developer",organization:"Restful Brilliance",location:"Remote",duration:"2018 - 2019",description:"Worked extensively with complex ElasticSearch solutions. Advising clients on and developing with Optimizely CMS, Optimizely Commerce, and Optimizely Search and Navigation. Created eCommerce checkout flows in Vue.js with Optimizely Commerce and PayPal payment providers.",duties:["Wrote proficient code in Optimizely Content Cloud and Optimizely Commerce Cloud.","Used Vue.js to write a single-page checkout flow for an eCommerce marketplace.","Implemented a complex Elastic Search solution for an catalog with 500,000 SKUs.","Integrated with InRiver and Stibo Systems PIM solutions to maintain catalog data/inventory.","Write and maintain unit testing for custom code."]},{title:"Solutions Developer",organization:"Making Waves/Nansen Inc.",location:"Chicago, IL, USA",duration:"2014 - 2018",description:"In my first professional development position, I refined my skills in .Net and Javascript. In addition, my expertise in Optimizely Commerce gave me the opportunity to work at our headquarters in Oslo, Norway on the website for their main standards organization: standard.no.",duties:["Learned Optimizely Content Cloud, Optimizely Commerce Cloud, and Optimizely Search & Navigation.","Implemented Object-Oriented design patterns to make solutions scalable and easier to maintain.","Wrote a commerce customization to delegate multiple shipments per order based on warehouse inventory."]}];var certifications=[{name:"Commerce Cloud Developer",issuer:"Optimizely",duration:"Mar, 2021 - Mar, 2023"},{name:"Content Cloud Developer",issuer:"Optimizely",duration:"Mar, 2022 - Jan, 2025"}];var education=[{name:"DePaul University",location:"Chicago, IL, USA",year:"2010 - 2014",degree:"Bachelor of Science, Computer Science"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,certifications:certifications,education:education};
+    var name="Zach Graceffa";var email="zach@zachgraceffa.com";var phone="414-699-1984";var website="zachgraceffa.com";var bio="As a developer with over 10 years of experience, I started with Visual Basic and am now an expert in object oriented languages like Java and C#. In this time I have garnered specialties in search & discovery, eCommerce marketplaces, and DevOps. While I am a back-end developer, I am also proficient in front-end development with a strong understanding of Javascript. I enjoy working in Agile/Scrum environments, from either precise or top-level requirements, and with team members from around the world.";var jobs=[{title:"Tech Lead",organization:"BlueBolt Solutions",location:"Chicago, IL, USA",duration:"2019 - Present",description:"Lead web and eCommerce projects on teams of 4-5 people in a full-stack capacity. Projects include technologies such as Optimizely CMS & Commerce, both .NET platforms; Bravo search, a proprietary ElasticSearch application using React; OpenId Connect SSO; and Azure Devops. In addition I have coded multiple microsites using React and Typescript.",duties:["Leveraged CMS and Commerce solutions to lead .NET projects on teams of 4-5 people.","Develop new features for Bravo Search, our Elastic-based, proprietary search platform.","Design and code REST APIs using correct HTTP methods and returning intuitive HTTP response codes.","Use LINQ and SQL to query data, use best database design patterns.","Optimize code using advanced understanding of concurrency and multi-threading in .Net.","Utilize Azure DevOps to configure CI/CD Pipelines and Releases, as well as judge pull requests.","Use Node.js, React,js, and MongoDB to architect and code smaller-projects."]},{title:"Senior Developer",organization:"Restful Brilliance",location:"Remote",duration:"2018 - 2019",description:"Worked extensively with complex ElasticSearch solutions. Advising clients on and developing with Optimizely CMS, Optimizely Commerce, and Optimizely Search and Navigation. Created eCommerce checkout flows in Vue.js with Optimizely Commerce and PayPal payment providers.",duties:["Implemented a complex Elastic Search solution for an catalog with 500,000 SKUs.","Translate DSL into search queries using C# .Net's Elastic Library.","Leveraged Kibana to run reports and diagnose search coverage in multiple search indices.","Log errors, and monitor performance with LogStash.","Used concurrency and multi-threading to optimize indexing procedures.","Developed service-based architectures utilizing dependency injection.","Wrote and maintained unit tests for custom code."]},{title:"Solutions Developer",organization:"Making Waves/Nansen Inc.",location:"Chicago, IL, USA",duration:"2014 - 2018",description:"In my first professional development position, I refined my skills in .Net and Javascript. In addition, my expertise in Optimizely Commerce gave me the opportunity to work at our headquarters in Oslo, Norway on the website for their main standards organization: standard.no.",duties:["Used my learned Java epertise from college and translated it to C#.","Implemented object-oriented design patterns to make solutions scalable and easier to maintain.","Coded multiple search solutions using Optimizely Search and Navigation, and Elastic-based search solution.","Used MongoDB and SQL Server to manage data."]}];var certifications=[];var education=[{name:"DePaul University",location:"Chicago, IL, USA",year:"2010 - 2014",degree:"Bachelor of Science, Computer Science",languagePath:"Java"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,certifications:certifications,education:education};
 
     /* src/App.svelte generated by Svelte v3.49.0 */
     const file = "src/App.svelte";
@@ -2501,7 +2521,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(letterpaper.$$.fragment);
-    			add_location(main, file, 10, 0, 370);
+    			add_location(main, file, 10, 0, 367);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2631,7 +2651,7 @@ var app = (function () {
         target: document.body,
         props: {
             resumeType: 'Base',
-            resumeJsonFile: 'optimizely'
+            resumeJsonFile: 'elastic'
         }
     });
 

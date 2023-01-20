@@ -28,5 +28,6 @@ interface Institution {
     name: string,
     location: string,
     year: string,
-    degree: string
+    degree: string,
+    languagePath: string
 }

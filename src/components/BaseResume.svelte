@@ -46,7 +46,7 @@
         </section>
         {/if}
         <section>
-        {#if resumeData.certifications }
+        {#if resumeData.certifications  && resumeData.certifications.length}
         <h2>Certifications</h2>
         <hr />
         {/if}
@@ -69,7 +69,8 @@
                 <b>{institution.name}</b>
                 <span>{institution.location}</span>
                 <span class='abs-tr'>{institution.year}</span>
-                <h4 class='block'>{institution.degree}</h4>
+                <h4 class='block mb-1'>{institution.degree}</h4>
+                <span><b>Language Path:</b> {institution.languagePath}</span>
             </div>
             {/each}
         </section>
@@ -81,7 +82,6 @@
 <style>
     h1 {
         font-size: 48px;
-        margin-top: 0;
     }
     h2 {
         margin-bottom: 0px;
@@ -130,5 +130,8 @@
     }
     .m-b {
         margin-bottom: 16px;
+    }
+    .mb-1 {
+        margin-bottom: 8px;
     }
 </style>
