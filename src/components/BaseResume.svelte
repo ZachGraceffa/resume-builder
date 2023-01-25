@@ -66,11 +66,13 @@
             <hr />
             {#each resumeData.education as institution}
             <div class='rel'>
-                <b>{institution.name}</b>
+                <h3 class='inline'>{institution.name}</h3>
                 <span>{institution.location}</span>
                 <span class='abs-tr'>{institution.year}</span>
                 <h4 class='block mb-1'>{institution.degree}</h4>
+                {#if institution.languagePath}
                 <span><b>Language Path:</b> {institution.languagePath}</span>
+                {/if}
             </div>
             {/each}
         </section>
@@ -98,8 +100,11 @@
         font-weight: 450;
         display: inline;
     }
-    h4.block {
+    .block {
         display: block;
+    }
+    .inline {
+        display: inline;
     }
     header > div > p {
         margin: 0;
