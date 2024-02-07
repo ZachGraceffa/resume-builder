@@ -34,7 +34,7 @@
             {#each resumeData.jobs as job}
             <div class='rel'>
                 <h3>{job.title}</h3>
-                <h4>{job.organization}</h4> <span>{job.location}</span>
+                <h4>{job.organization}</h4> <span> · {job.location}</span>
                 <span class='abs-tr'>{job.duration}</span>
                 <ul>
                     {#each job.duties as duty}
