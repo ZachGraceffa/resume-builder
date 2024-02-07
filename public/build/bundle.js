@@ -2024,8 +2024,8 @@ var app = (function () {
     			b.textContent = "Language Path:";
     			t1 = space();
     			t2 = text(t2_value);
-    			add_location(b, file$2, 71, 22, 2254);
-    			add_location(span, file$2, 71, 16, 2248);
+    			add_location(b, file$2, 71, 22, 2257);
+    			add_location(span, file$2, 71, 16, 2251);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2060,18 +2060,19 @@ var app = (function () {
     	let t0;
     	let t1;
     	let span0;
-    	let t2_value = /*institution*/ ctx[1].location + "";
     	let t2;
+    	let t3_value = /*institution*/ ctx[1].location + "";
     	let t3;
-    	let span1;
-    	let t4_value = /*institution*/ ctx[1].year + "";
     	let t4;
+    	let span1;
+    	let t5_value = /*institution*/ ctx[1].year + "";
     	let t5;
-    	let h4;
-    	let t6_value = /*institution*/ ctx[1].degree + "";
     	let t6;
+    	let h4;
+    	let t7_value = /*institution*/ ctx[1].degree + "";
     	let t7;
     	let t8;
+    	let t9;
     	let if_block = /*institution*/ ctx[1].languagePath && create_if_block_2(ctx);
 
     	const block = {
@@ -2081,23 +2082,24 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			span0 = element("span");
-    			t2 = text(t2_value);
-    			t3 = space();
+    			t2 = text("· ");
+    			t3 = text(t3_value);
+    			t4 = space();
     			span1 = element("span");
-    			t4 = text(t4_value);
-    			t5 = space();
+    			t5 = text(t5_value);
+    			t6 = space();
     			h4 = element("h4");
-    			t6 = text(t6_value);
-    			t7 = space();
-    			if (if_block) if_block.c();
+    			t7 = text(t7_value);
     			t8 = space();
+    			if (if_block) if_block.c();
+    			t9 = space();
     			attr_dev(h3, "class", "inline svelte-b2pi5x");
     			add_location(h3, file$2, 66, 16, 1962);
     			add_location(span0, file$2, 67, 16, 2021);
     			attr_dev(span1, "class", "abs-tr svelte-b2pi5x");
-    			add_location(span1, file$2, 68, 16, 2073);
+    			add_location(span1, file$2, 68, 16, 2076);
     			attr_dev(h4, "class", "block mb-1 svelte-b2pi5x");
-    			add_location(h4, file$2, 69, 16, 2136);
+    			add_location(h4, file$2, 69, 16, 2139);
     			attr_dev(div, "class", "rel svelte-b2pi5x");
     			add_location(div, file$2, 65, 12, 1928);
     		},
@@ -2108,21 +2110,22 @@ var app = (function () {
     			append_dev(div, t1);
     			append_dev(div, span0);
     			append_dev(span0, t2);
-    			append_dev(div, t3);
+    			append_dev(span0, t3);
+    			append_dev(div, t4);
     			append_dev(div, span1);
-    			append_dev(span1, t4);
-    			append_dev(div, t5);
+    			append_dev(span1, t5);
+    			append_dev(div, t6);
     			append_dev(div, h4);
-    			append_dev(h4, t6);
-    			append_dev(div, t7);
-    			if (if_block) if_block.m(div, null);
+    			append_dev(h4, t7);
     			append_dev(div, t8);
+    			if (if_block) if_block.m(div, null);
+    			append_dev(div, t9);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*resumeData*/ 1 && t0_value !== (t0_value = /*institution*/ ctx[1].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*resumeData*/ 1 && t2_value !== (t2_value = /*institution*/ ctx[1].location + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*resumeData*/ 1 && t4_value !== (t4_value = /*institution*/ ctx[1].year + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*resumeData*/ 1 && t6_value !== (t6_value = /*institution*/ ctx[1].degree + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*resumeData*/ 1 && t3_value !== (t3_value = /*institution*/ ctx[1].location + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*resumeData*/ 1 && t5_value !== (t5_value = /*institution*/ ctx[1].year + "")) set_data_dev(t5, t5_value);
+    			if (dirty & /*resumeData*/ 1 && t7_value !== (t7_value = /*institution*/ ctx[1].degree + "")) set_data_dev(t7, t7_value);
 
     			if (/*institution*/ ctx[1].languagePath) {
     				if (if_block) {
@@ -2130,7 +2133,7 @@ var app = (function () {
     				} else {
     					if_block = create_if_block_2(ctx);
     					if_block.c();
-    					if_block.m(div, t8);
+    					if_block.m(div, t9);
     				}
     			} else if (if_block) {
     				if_block.d(1);
@@ -2361,7 +2364,7 @@ var app = (function () {
     	}
     }
 
-    var name="Zach Graceffa";var email="zachgraceffa@gmail.com";var phone="414-699-1984";var website="zachgraceffa.com";var bio="As a developer with over 10 years of experience, I started with Visual Basic and am now proficient in C#/.Net. In this time I have garnered specialties in search & discovery, eCommerce marketplaces, and DevOps. I enjoy working in Agile/Scrum environments; from either precise or top-level requirements; and with team members from multiple disciplines. For personal projects I enjoy developing with Node.Js, Next.js, and Docker.";var jobs=[{title:"Technical Lead",organization:"BlueBolt Solutions",location:"Chicago, IL, USA",duration:"Jun 2018 - Dec 2023",description:"Lead web and eCommerce projects on teams of 4-5 people in a full-stack capacity. Projects include technologies such as Optimizely CMS & Commerce, both .NET platforms; Bravo search, a proprietary ElasticSearch application using React; OpenId Connect SSO; and Azure Devops. In addition I have coded multiple microsites using React and Typescript.",duties:["Lead Optimizely Content Cloud and Optimizely Commerce Cloud projects on teams of 4-5 people.","Use Optimizely Search & Navigation to create complex search & discovery features.","Perform upgrades from .Net Framework to .Net Core and Optimizely 11 to 12.","Optimize computations using advanced understanding of multi-threading in .Net.","Use Azure DevOps to configure CI/CD Pipelines and Releases for the Optimizely DXP Deployment API.","Use Node.js and state management/templating systems such as React.js to launch microsites."]},{title:"Senior Developer",organization:"Restful Brilliance",location:"Remote, USA",duration:"Jun 2018 - Nov 2019",description:"Worked extensively with complex ElasticSearch solutions. Advising clients on and developing with Optimizely CMS, Optimizely Commerce, and Optimizely Search and Navigation. Created eCommerce checkout flows in Vue.js with Optimizely Commerce and PayPal payment providers.",duties:["Wrote proficient code in Optimizely Content Cloud and Optimizely Commerce Cloud.","Used Vue.js to write a single-page checkout flow for an eCommerce marketplace.","Implemented a complex Elastic Search solution for an catalog with 500,000 SKUs.","Integrated with InRiver and Stibo Systems PIM solutions to maintain catalog data/inventory.","Wrote and maintained unit tests for custom code."]},{title:"Solutions Developer",organization:"Making Waves/Nansen Inc.",location:"Chicago, IL, USA",duration:"Apr 2014 - May 2018",description:"In my first professional development position, I refined my skills in .Net and Javascript. In addition, my expertise in Optimizely Commerce gave me the opportunity to work at our headquarters in Oslo, Norway on the website for their main standards organization: standard.no.",duties:["Learned Optimizely Content Cloud, Optimizely Commerce Cloud, and Optimizely Search & Navigation.","Implemented object-oriented design patterns to make solutions scalable and easier to maintain.","Used GIT source control to manage branching, merging, and submitting pull requests."]}];var certifications=[{name:"Content Cloud Developer",issuer:"Optimizely",duration:"Mar 2022 - Jan 2025"}];var expiredCertifications=[{name:"Commerce Cloud Developer",issuer:"Optimizely",duration:"Mar 2021 - Mar 2023"}];var education=[{name:"DePaul University",location:"Chicago, IL, USA",year:"2010 - 2014",degree:"Bachelor of Science, Computer Science"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,certifications:certifications,expiredCertifications:expiredCertifications,education:education};
+    var name="Zach Graceffa";var email="zachgraceffa@gmail.com";var phone="414-699-1984";var website="zachgraceffa.com";var bio="As a developer with over 10 years of experience, I started with Visual Basic and am now proficient in C#/.Net. In this time I have garnered specialties in search & discovery, eCommerce marketplaces, and DevOps. I enjoy working in Agile/Scrum environments; from either precise or top-level requirements; and with team members from multiple disciplines. For personal projects I enjoy developing with Next.js, Node.Js, and Docker.";var jobs=[{title:"Technical Lead",organization:"BlueBolt Solutions",location:"Chicago, IL, USA",duration:"Jun 2018 - Dec 2023",description:"Lead web and eCommerce projects on teams of 4-5 people in a full-stack capacity. Projects include technologies such as Optimizely CMS & Commerce, both .NET platforms; Bravo search, a proprietary ElasticSearch application using React; OpenId Connect SSO; and Azure Devops. In addition I have coded multiple microsites using React and Typescript.",duties:["Lead Optimizely Content Cloud and Optimizely Commerce Cloud projects on teams of 4-5 people.","Use Optimizely Search & Navigation to create complex search & discovery features.","Perform upgrades from .Net Framework to .Net Core and Optimizely 11 to 12.","Optimize computations using advanced understanding of multi-threading in .Net.","Use Azure DevOps to configure CI/CD Pipelines and Releases for the Optimizely DXP Deployment API.","Use Node.js and state management/templating systems such as React.js to launch microsites."]},{title:"Senior Developer",organization:"Restful Brilliance",location:"Remote, USA",duration:"Jun 2018 - Nov 2019",description:"Worked extensively with complex ElasticSearch solutions. Advising clients on and developing with Optimizely CMS, Optimizely Commerce, and Optimizely Search and Navigation. Created eCommerce checkout flows in Vue.js with Optimizely Commerce and PayPal payment providers.",duties:["Wrote proficient code in Optimizely Content Cloud and Optimizely Commerce Cloud.","Used Vue.js to write a single-page checkout flow for an eCommerce marketplace.","Implemented a complex Elastic Search solution for an catalog with 500,000 SKUs.","Integrated with InRiver and Stibo Systems PIM solutions to maintain catalog data/inventory.","Wrote and maintained unit tests for custom code."]},{title:"Solutions Developer",organization:"Making Waves/Nansen Inc.",location:"Chicago, IL, USA",duration:"Apr 2014 - May 2018",description:"In my first professional development position, I refined my skills in .Net and Javascript. In addition, my expertise in Optimizely Commerce gave me the opportunity to work at our headquarters in Oslo, Norway on the website for their main standards organization: standard.no.",duties:["Learned Optimizely Content Cloud, Optimizely Commerce Cloud, and Optimizely Search & Navigation.","Implemented object-oriented design patterns to make solutions scalable and easier to maintain.","Used GIT source control to manage branching, merging, and submitting pull requests."]}];var certifications=[{name:"Content Cloud Developer",issuer:"Optimizely",duration:"Mar 2022 - Jan 2025"}];var expiredCertifications=[{name:"Commerce Cloud Developer",issuer:"Optimizely",duration:"Mar 2021 - Mar 2023"}];var education=[{name:"DePaul University",location:"Chicago, IL, USA",year:"2010 - 2014",degree:"Bachelor of Science, Computer Science"}];var resumeJson = {name:name,email:email,phone:phone,website:website,bio:bio,jobs:jobs,certifications:certifications,expiredCertifications:expiredCertifications,education:education};
 
     /* src/App.svelte generated by Svelte v3.49.0 */
     const file = "src/App.svelte";

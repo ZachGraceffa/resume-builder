@@ -67,7 +67,7 @@
             {#each resumeData.education as institution}
             <div class='rel'>
                 <h3 class='inline'>{institution.name}</h3>
-                <span>{institution.location}</span>
+                <span> · {institution.location}</span>
                 <span class='abs-tr'>{institution.year}</span>
                 <h4 class='block mb-1'>{institution.degree}</h4>
                 {#if institution.languagePath}
